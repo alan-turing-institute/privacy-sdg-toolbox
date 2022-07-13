@@ -286,7 +286,7 @@ class LabelInferenceThreatModel(TrainableThreatModel):
                 return mem_datasets[:num_samples], mem_labels[:num_samples]
         # Generate sample: first, produce the original datasets with labels.
         training_datasets, gen_labels = self.atk_know_data.generate_datasets_with_label(
-            num_samples, training=True
+            num_samples, training=training
         )
         # Then, generate synthetic data from each original dataset.
         gen_datasets = [
